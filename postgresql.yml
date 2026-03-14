@@ -1,0 +1,17 @@
+version: '3.8'
+# uncomment the line if you need a container located in a specific folder.
+# name: folder
+
+services:
+  db:
+    # pulls latest image if you remove tag
+    image: postgres:16
+    # uncomment the line if you need to rename the container
+    # container_name: name
+    environment:
+      # uses username as database name if you don't specify POSTGRES_DB
+      POSTGRES_DB: root
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - 5432:5432
